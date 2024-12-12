@@ -59,6 +59,7 @@
     \label{fig:memory_chart}
 \end{figure}
 \newpage
+
 \section{Найкращий алгоритм за результатами}
 \begin{table}[h!]
     \centering
@@ -66,16 +67,48 @@
     \toprule
     \textbf{Data Type}      & \textbf{Time} & \textbf{Swaps} & \textbf{Comparisons} & \textbf{Memory Used} \\
     \midrule
-    Identical       & Dijkstra & Dijkstra & Comparison Value & Memory Value \\
-    Sorted          & Dijkstra & DoublePivot & Comparison Value & HoareMed3Rand \\
-    Random Data     & Dijkstra & HoareRandom & Dijkstra & Memory Value \\
+    Identical       & Dijkstra & Dijkstra & Dijkstra & Dijkstra \\
+    Sorted          & Dijkstra & DoublePivot & Dijkstra & HoareMed3Rand \\
+    Random Data     & Dijkstra & HoareRandom & Dijkstra & Dijkstra \\
     Almost Sorted   & HoareMed3 & HoareMed3 & Dijkstra & HoareMed3Rand \\
-    Memory Used     & Dijkstra & LomutoLast & Comparison Value & HoareMed3 \\
+    Memory Used     & Dijkstra & LomutoLast & Dijkstra & HoareMed3 \\
     Triangular      & Dijkstra & Swap Value & Dijkstra & HoareMed3Rand \\
     \bottomrule
     \end{tabular}
     \caption{Найкращий алгоритм для кожної категорії базуючись на графіках.}
     \label{tab:performance_metrics}
 \end{table}
-    
+\section{Результати Дейкстри для великих данних}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{D://University/third_course/AppliedAlgorithms/lab7/time_plots_dijkstra/time_vs_size_dijkstra.png}
+    \caption{Графік для часу.}
+    \label{fig:time_chart_d}
+\end{figure}
+\newpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{D://University/third_course/AppliedAlgorithms/lab7/swaps_plots_dijkstra/swaps_vs_size_dijkstra.png}
+    \caption{Графік для переставлянь.}
+    \label{fig:swaps_chart_d}
+\end{figure}
+\newpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{D://University/third_course/AppliedAlgorithms/lab7/comparisons_plots_dijkstra/comparisons_vs_size_dijkstra.png}
+    \caption{Графік для порівнянь.}
+    \label{fig:comparison_chart_d}
+\end{figure}
+\newpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{D://University/third_course/AppliedAlgorithms/lab7/memory_used_plots_dijkstra/memory_used_vs_size_dijkstra.png}
+    \caption{Графік для використаної пам'яті (KB).}
+    \label{fig:memory_chart_d}
+\end{figure}
+\section{Висновки}
+Найкраще себе показав quicksort з схемою розбиття Дейкстри (3-х стороннє розбиття, опорний елемент -- медiана трьох випадково обраних
+елементiв.). Найгірше Lomuto з будь яким опорним елементом. Схема розбиття з двома опорними елементами також показала себе непогано на випадкових данних.\\
+Для більш детальної інформації, будь ласка, відвідайте наступний ресурс:
+\href{https://github.com/gre1wy/AppliedAlgorithms/tree/main/lab7}{Перейти до репозиторію}.
 \end{document}
